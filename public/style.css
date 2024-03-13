@@ -1,0 +1,55 @@
+/* *{
+    padding: 0;
+} */
+body{
+    background-color: beige;
+}
+form{
+    border: 2px solid rgb(76, 32, 153);
+    padding: 20px;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-table{
+    text-align: center;
+    
+}
+table{
+    border: 1px solid rgb(76, 32, 153);
+    border-spacing: 0;
+    margin: auto;
+}
+
+td,th{
+    padding: 5px;
+    border: 1px solid rgb(76, 32, 153);
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    word-wrap: break-word; /* Break words at any point */
+    overflow-y: scroll;  /* Enable vertical scrollbar */
+    max-width: 400px; /* Set a maximum width */
+
+}
+input,button{
+    padding: 0.4rem;
+    border-radius: 0.5rem ;
+}
+input{
+    width: 25rem;
+}
+
+.nav a{
+    text-decoration: none;
+    width: 5rem;
+    border-radius: 0.5rem ;
+    font-size: 1.2rem;
+    background-color: rgb(76, 32, 153);
+    color: white;
+    padding: 0.4rem;
+    text-align: center;
+}
