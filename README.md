@@ -53,7 +53,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-This project was created by [Kaif Sardar].
+This project was created by [Kaif Sardar](https://www.linkedin.com/in/kaifsardar/).
 
 ## Contact
 
