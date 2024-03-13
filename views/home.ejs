@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Url Shortener</title>
+</head>
+<body>
+    <div class="nav">
+        <h2>Wellcome <%=name%> </h2>
+        <a href="/user/logout">Log out</a>
+    </div>
+    
+    <form action="/url" method="post">
+        <h3>Short Your Long Urls</h3>
+        <label for="url">Original Url</label>
+        <input type="text" name="url" id="url" placeholder="https://www.example.com/" required>
+        <button type="submit">Short</button>
+    </form>
+    <div class="center-table">
+        <h2>Your Urls are here :)</h2>
+        <table>
+            <tr>
+                <th >Sl.no</th>
+                <th>Shorted Url</th>
+                <th>Original Url</th>
+                <th>Clicks</th>
+            </tr>
+            <% let j=1; %>
+            <% urls.forEach(url => { %>
+             <tr>
+                <td><%= j++; %></td>
+                <td>http://localhost:<%=port%>/url/<%=url.shortId%></td>
+                <td class="vertical-text"><%= url.originalUrl %></td>
+                <td><%= url.visitHistory.length %></td>
+             </tr>
+            <% }) %>
+    
+        </table>
+    </div>
+    
+</body>
+</html>

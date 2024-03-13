@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: beige;
+    }
+    h2{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        color: rgb(76, 32, 153);
+
+    }
+    form{
+
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgb(76, 32, 153);
+        width: 20rem;
+        margin:  30vh auto ;
+
+    }
+    button{
+        width: 35%;
+        margin: auto;
+        /* line-height: 1.5rem; */
+        padding:0.4rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1.3rem;
+        background-color: rgb(76, 32, 153);
+        color: white;
+    }
+    input{
+        padding:0.3rem;
+        width: 100%;
+        line-height: 1.3rem;
+    }
+   
+</style>
+<body>
+    <form  class="login" action="/user/login" method="post">
+        <h2>Login</h2>
+        <input type="email" name="email" id="email" placeholder="Email id">
+        <br>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+        <button type="submit">login</button>
+    <h3>Don't have account ? <a href="/user/signup"> signup</a></h3>
+    </form>
+
+</body>
+</html>
