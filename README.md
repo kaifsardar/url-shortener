@@ -4,7 +4,7 @@ This project is a URL shortener similar to services like Bit.ly, built using Nod
 
 ## Features
 
-- Shorten long URLs into compact, easy-to-share links.
+- Shorten long URLs into compact url.
 - Secure authentication system to manage user access and data.
 - Full-stack solution providing efficient URL management and redirection.
 
