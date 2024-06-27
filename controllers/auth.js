@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 exports.signupHandeler=async (req,res)=>{
     const {name,email,password}=req.body;
     if(!name || !email || !password){
-    console.log("field missiing");
+
      return res.redirect('/user/signup');
     }   
 

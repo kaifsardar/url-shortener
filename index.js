@@ -22,7 +22,7 @@ app.set('public',__dirname+'/public');
 app.use(express.json());
 dbConnect();
 
-app.use('/url',urlRoute);
+app.use('/',urlRoute);
 app.use('/user',userRoute);
 
 const PORT=process.env.PORT || 6969;

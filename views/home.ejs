@@ -12,10 +12,10 @@
         <a href="/user/logout">Log out</a>
     </div>
     
-    <form action="/url" method="post">
+    <form action="/" method="post">
         <h3>Short Your Long Urls</h3>
         <label for="url">Original Url</label>
-        <input type="text" name="url" id="url" placeholder="https://www.example.com/" required>
+        <input type="url" name="url" id="url" placeholder="https://www.example.com/" required>
         <button type="submit">Short</button>
     </form>
     <div class="center-table">
@@ -31,7 +31,7 @@
             <% urls.forEach(url => { %>
              <tr>
                 <td><%= j++; %></td>
-                <td>http://localhost:<%=port%>/url/<%=url.shortId%></td>
+                <td><b>www.bit.erkaif.xzy/</b><%=url.shortId%></td>
                 <td class="vertical-text"><%= url.originalUrl %></td>
                 <td><%= url.visitHistory.length %></td>
              </tr>

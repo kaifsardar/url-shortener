@@ -21,6 +21,12 @@
         color: rgb(76, 32, 153);
 
     }
+    h1{
+        margin-top: 1rem;
+        text-align: center;
+        background-color: wheat;
+        line-height: 4rem;
+    }
     form{
 
         justify-content: center;
@@ -52,13 +58,15 @@
    
 </style>
 <body>
+    <h1>URL Shortener</h1>
+
     <form   action="/user/signup" method="post">
         <h2>Sign up</h2>
-        <input type="text" name="name" id="name" placeholder="Full Name">
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
         <br>
-        <input type="email" name="email" id="email" placeholder="Email id">
+        <input type="email" name="email" id="email" placeholder="Email id" required>
         <br>
-        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="password" id="password" placeholder="Password" required>
         <br>
         <button type="submit">Sign up</button>
     <h3>Already have a account ? <a href="/user/login">login</a></h3>
