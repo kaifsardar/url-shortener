@@ -1,6 +1,6 @@
 const User=require("../models/user");
 const jwt = require('jsonwebtoken');
-
+require('dotenv').config();
 exports.signupHandeler=async (req,res)=>{
     const {name,email,password}=req.body;
     if(!name || !email || !password){
@@ -14,7 +14,7 @@ exports.signupHandeler=async (req,res)=>{
         await User.create({
             name,email,password
         });
-        const token=jwt.sign({name:name,email:email},'Kaif@22534');
+        const token=jwt.sign({name:name,email:email},process.env.JWT_TOKEN);
         res.cookie('jwt',token).redirect('/');
         }
         catch(err){
@@ -35,7 +35,7 @@ exports.loginHandeler=async (req,res)=>{
     const user=await User.findOne({email,password});
     if(!user) return res.redirect('/user/login');
     if(password!=user.password) return res.redirect('/user/login');
-    const token=jwt.sign({name:user.name,email:user.email},'Kaif@22534');
+    const token=jwt.sign({name:user.name,email:user.email},process.env.JWT_TOKEN);
     res.cookie('jwt',token).redirect('/');
     }
     catch{
